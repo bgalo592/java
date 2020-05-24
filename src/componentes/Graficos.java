@@ -40,9 +40,14 @@ public class Graficos extends JFrame implements ActionListener {
 
         boton = new JButton("Ver contenido");
         boton.setName("btnVer");
-        boton.setLocation(10, 40);
+        boton.setLocation(30, 40);
         boton.setPreferredSize(new Dimension(200, 35));
         boton.addActionListener(this);
+
+        label = new JLabel("");
+        label.setLocation(10, 40);
+        label.setPreferredSize(new Dimension(200, 35));
+        panel.add(label);
 
         panel.add(boton);
 
@@ -51,10 +56,7 @@ public class Graficos extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        label = new JLabel("");
-        label.setLocation(10, 40);
-        label.setPreferredSize(new Dimension(200, 35));
-        label.setText("Hola como estas" + tex.getText());
-        panel.add(label);
+        label.setText(tex.getText());
+        tex.setText("");
     }
 }
