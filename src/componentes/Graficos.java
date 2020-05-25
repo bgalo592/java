@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 public class Graficos extends JFrame implements ActionListener {
@@ -17,6 +18,7 @@ public class Graficos extends JFrame implements ActionListener {
     JTextField tex;
     JButton boton;
     JLabel label;
+    JRadioButton radioH, radioM;
 
     public Graficos() {
         this.setTitle("Practica de componentes basicos");
@@ -28,7 +30,6 @@ public class Graficos extends JFrame implements ActionListener {
     }
 
     private void iniciarComponentes() {
-
         panel = new JPanel();
         panel.setBackground(new Color(3, 131, 135));
 
@@ -43,6 +44,11 @@ public class Graficos extends JFrame implements ActionListener {
         boton.setLocation(30, 40);
         boton.setPreferredSize(new Dimension(200, 35));
         boton.addActionListener(this);
+
+        radioH = new JRadioButton("Masculino");
+        radioM = new JRadioButton("Femenino");
+        panel.add(radioH);
+        panel.add(radioM);
 
         label = new JLabel("");
         label.setLocation(10, 40);
